@@ -1,0 +1,11 @@
+<img [src]="user?.picture?.large" alt="" width="150" height="150" />
+<p>
+  {{ user?.name?.title }}
+  {{ user?.name?.first }}
+  {{ user?.name?.last }}
+</p>
+<p>{{ user.email }}</p>
+
+<ul *ngIf="user.pets">
+  <li *ngFor="let pet of user.pets">{{ pet }}</li>
+</ul>
